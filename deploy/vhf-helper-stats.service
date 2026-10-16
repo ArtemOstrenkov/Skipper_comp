@@ -1,0 +1,16 @@
+[Unit]
+Description=Monthly visit and call counters for VHF Panic
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/vhf-helper/stats.py
+Environment=STATS_PATH=/var/lib/vhf-helper/stats.json
+Environment=STATS_PORT=8788
+Restart=on-failure
+User=www-data
+Group=www-data
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
