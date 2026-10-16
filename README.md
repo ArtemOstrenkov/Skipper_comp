@@ -152,10 +152,11 @@ src/
 ├── app.ts                    # Main application logic
 ├── main.ts                   # Entry point
 ├── state.ts                  # App state management
-├── i18n.ts                   # Translations (core)
-├── i18n-extra.ts             # Extended language support
+├── i18n.ts                   # Language detection and lookup
+├── locales.ts                # Loads the translation catalog
+├── locales.json              # All UI and article translations
 ├── knowledge.ts              # Knowledge base index
-├── knowledge-*.ts            # Category content files
+├── knowledge-*.ts            # Article metadata per category
 ├── knowledge-types.ts        # Type definitions
 ├── knowledge-render.ts       # Content rendering
 ├── gps.ts                    # Geolocation
