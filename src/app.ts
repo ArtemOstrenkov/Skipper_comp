@@ -143,35 +143,145 @@ export function mountApp(root: HTMLElement): void {
     toastTimer = window.setTimeout(() => node?.classList.remove("show"), 2800);
   }
 
+  type NavSnap = {
+    v: 1;
+    index: number;
+    screen: Screen;
+    stack: Screen[];
+    marineStep: number;
+    vesselStep: number;
+    marinePurpose: string;
+    vesselPurpose: string;
+    vesselKind: string;
+    vesselNameDraft: string;
+    relativePosition: string;
+    currentCategory: KnowledgeCategory | null;
+    currentArticleId: string | null;
+    gpsFrom: "home" | "distress";
+  };
+
+  let pendingHome = false;
+
+  function isSnap(value: unknown): value is NavSnap {
+    if (!value || typeof value !== "object") return false;
+    const snap = value as NavSnap;
+    return snap.v === 1 && typeof snap.index === "number" && typeof snap.screen === "string";
+  }
+
+  function capture(index: number): NavSnap {
+    return {
+      v: 1,
+      index,
+      screen,
+      stack: [...stack],
+      marineStep,
+      vesselStep,
+      marinePurpose,
+      vesselPurpose,
+      vesselKind,
+      vesselNameDraft,
+      relativePosition,
+      currentCategory,
+      currentArticleId,
+      gpsFrom,
+    };
+  }
+
+  function restore(snap: NavSnap): void {
+    screen = snap.screen;
+    stack.length = 0;
+    stack.push(...(snap.stack || []));
+    marineStep = snap.marineStep || 1;
+    vesselStep = snap.vesselStep || 1;
+    marinePurpose = snap.marinePurpose || "";
+    vesselPurpose = snap.vesselPurpose || "";
+    vesselKind = snap.vesselKind || "";
+    vesselNameDraft = snap.vesselNameDraft || "";
+    relativePosition = snap.relativePosition || "";
+    currentCategory = snap.currentCategory;
+    currentArticleId = snap.currentArticleId;
+    gpsFrom = snap.gpsFrom === "distress" ? "distress" : "home";
+  }
+
+  function navIndex(): number {
+    return isSnap(history.state) ? history.state.index : 0;
+  }
+
+  function historyUrl(index: number): string {
+    const base = `${location.pathname}${location.search}`;
+    return index > 0 ? `${base}#s${index}` : base;
+  }
+
+  function replaceHistory(): void {
+    const index = navIndex();
+    history.replaceState(capture(index), "", historyUrl(index));
+  }
+
+  function pushHistory(): void {
+    const index = navIndex() + 1;
+    history.pushState(capture(index), "", historyUrl(index));
+  }
+
+  function resetToHome(): void {
+    stack.length = 0;
+    screen = "home";
+    marineStep = 1;
+    vesselStep = 1;
+  }
+
   function go(next: Screen): void {
     langMenuOpen = false;
+    replaceHistory();
     stack.push(screen);
     screen = next;
+    pushHistory();
+    render();
+  }
+
+  function advanceWizard(apply: () => void): void {
+    langMenuOpen = false;
+    replaceHistory();
+    apply();
+    pushHistory();
     render();
   }
 
   function back(): void {
     langMenuOpen = false;
+    if (navIndex() > 0) {
+      history.back();
+      return;
+    }
     unmountMap?.();
     unmountMap = null;
-    if (screen === "marine" && marineStep === 2) {
-      marineStep = 1;
-      render();
-      return;
-    }
-    if (screen === "vessel" && vesselStep === 2) {
-      vesselStep = 1;
-      render();
-      return;
-    }
     screen = stack.pop() || "home";
     render();
   }
 
   function home(): void {
     langMenuOpen = false;
-    stack.length = 0;
-    screen = "home";
+    const index = navIndex();
+    if (index > 0) {
+      pendingHome = true;
+      history.go(-index);
+      return;
+    }
+    resetToHome();
+    replaceHistory();
+    render();
+  }
+
+  function onPopState(event: PopStateEvent): void {
+    langMenuOpen = false;
+    if (pendingHome) {
+      pendingHome = false;
+      resetToHome();
+      history.replaceState(capture(0), "", historyUrl(0));
+      render();
+      return;
+    }
+    if (!isSnap(event.state)) return;
+    restore(event.state);
     render();
   }
 
@@ -296,7 +406,7 @@ export function mountApp(root: HTMLElement): void {
         <header class="top${branded ? " is-brand" : ""}">
           ${
             showBack
-              ? `<button class="icon-btn" data-act="back" aria-label="${esc(tr("back"))}">${icon("back")}</button>`
+              ? `<button type="button" class="icon-btn" data-act="back" aria-label="${esc(tr("back"))}">${icon("back")}</button>`
               : ""
           }
           <h1>${
@@ -1196,8 +1306,9 @@ POSITION 'coordinates' AT 'time' UTC
       if (screen === "marine") {
         if (marineStep === 1) {
           if (!marinePurpose) return toast(tr("errPurpose"));
-          marineStep = 2;
-          render();
+          advanceWizard(() => {
+            marineStep = 2;
+          });
           return;
         }
         const marina =
@@ -1217,8 +1328,9 @@ POSITION 'coordinates' AT 'time' UTC
       if (screen === "vessel") {
         if (vesselStep === 1) {
           if (!vesselPurpose) return toast(tr("errVariant"));
-          vesselStep = 2;
-          render();
+          advanceWizard(() => {
+            vesselStep = 2;
+          });
           return;
         }
         if (!vesselKind) return toast(tr("errVessel"));
@@ -1337,6 +1449,10 @@ POSITION 'coordinates' AT 'time' UTC
       }
     }
   }
+
+  if (isSnap(history.state)) restore(history.state);
+  else history.replaceState(capture(0), "", historyUrl(0));
+  window.addEventListener("popstate", onPopState);
 
   render();
   void refreshGps(true);
