@@ -5346,7 +5346,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-bowline.jpg",
+              "src": "/knowledge/illustrations/knot-bowline.svg",
               "alt": "Bowline knot step-by-step diagram",
               "caption": "Rabbit comes out of hole, around tree, back down hole"
             },
@@ -5397,7 +5397,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-cleat-hitch.jpg",
+              "src": "/knowledge/illustrations/knot-cleat-hitch.svg",
               "alt": "Cleat hitch step-by-step diagram",
               "caption": "Full turn, figure-8s, then locking turn"
             },
@@ -5434,7 +5434,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-figure-eight.jpg",
+              "src": "/knowledge/illustrations/knot-figure-eight.svg",
               "alt": "Figure eight knot step-by-step diagram",
               "caption": "Forms a figure-8 shape when tightened"
             },
@@ -5478,6 +5478,12 @@
               "content": "Quick attachment to a post, rail, or ring."
             },
             {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-clove-hitch.svg",
+              "alt": "Clove hitch step-by-step diagram",
+              "caption": "One turn, cross over, second turn, tuck under the cross"
+            },
+            {
               "type": "heading",
               "content": "Uses"
             },
@@ -5492,6 +5498,19 @@
             {
               "type": "warning",
               "content": "Can slip under intermittent loads. Add half-hitches or use different knot for critical applications."
+            },
+            {
+              "type": "heading",
+              "content": "How to Tie"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Pass the working end around the rail once",
+                "2. Cross it over the standing part",
+                "3. Take a second turn the same way",
+                "4. Tuck the working end under that cross"
+              ]
             }
           ]
         },
@@ -5502,6 +5521,12 @@
             {
               "type": "text",
               "content": "Secure, reliable way to tie to a post, ring, or rail."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-round-turn.svg",
+              "alt": "Round turn and two half hitches step-by-step diagram",
+              "caption": "Twice around, then two half hitches the same way"
             },
             {
               "type": "heading",
@@ -5528,6 +5553,12 @@
             {
               "type": "text",
               "content": "Joins two ropes, especially of different diameters."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-sheet-bend.svg",
+              "alt": "Sheet bend step-by-step diagram",
+              "caption": "Through the bight, around both legs, tuck under itself"
             },
             {
               "type": "heading",
@@ -5557,6 +5588,12 @@
               "content": "Attaches to another rope or spar, can slide but grips under load."
             },
             {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-rolling-hitch.svg",
+              "alt": "Rolling hitch step-by-step diagram",
+              "caption": "Two turns toward the pull, then a half hitch on the other side"
+            },
+            {
               "type": "heading",
               "content": "Uses"
             },
@@ -5566,6 +5603,19 @@
                 "Taking strain off a line (to clear winch override)",
                 "Attaching to spinnaker pole",
                 "Snubbing anchor rode"
+              ]
+            },
+            {
+              "type": "heading",
+              "content": "How to Tie"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Take a turn around the rope, with the standing part leading toward the pull",
+                "2. Take a second turn the same way, tucked between the first turn and the standing part",
+                "3. Make a half hitch on the side away from the pull, turning the same way",
+                "4. Snug the hitch before it takes the load"
               ]
             }
           ]
@@ -5577,6 +5627,12 @@
             {
               "type": "text",
               "content": "Joins two ropes of SAME diameter. 'Left over right, right over left'."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-reef-knot.svg",
+              "alt": "Reef knot step-by-step diagram",
+              "caption": "Left over right, then right over left"
             },
             {
               "type": "warning",
@@ -5593,6 +5649,18 @@
                 "Tying bundles",
                 "Non-critical joins"
               ]
+            },
+            {
+              "type": "heading",
+              "content": "How to Tie"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Cross the left end over the right and tuck it under",
+                "2. Cross the end now on the right over the other one and tuck it under",
+                "3. Dress it flat: each tail lies back beside its own standing part"
+              ]
             }
           ]
         },
@@ -5603,6 +5671,12 @@
             {
               "type": "text",
               "content": "Binding knot - extremely tight, holds firmly."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-constrictor.svg",
+              "alt": "Constrictor knot step-by-step diagram",
+              "caption": "Like a clove hitch, but the end goes under both strands"
             },
             {
               "type": "heading",
@@ -5620,6 +5694,19 @@
             {
               "type": "warning",
               "content": "Very hard to untie - may need to cut. Don't use where you'll need to undo it!"
+            },
+            {
+              "type": "heading",
+              "content": "How to Tie"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Take a turn and cross the working end over the standing part",
+                "2. Take a second turn the same way",
+                "3. Lead the end over the standing part, then under the riding turn and under the standing part",
+                "4. Pull tight. Both ends come out between the turns"
+              ]
             }
           ]
         },
@@ -5643,7 +5730,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-bowline.jpg",
+              "src": "/knowledge/illustrations/knot-bowline.svg",
               "alt": "Пошаговая схема узла булинь",
               "caption": "Кролик выходит из норы, вокруг дерева, обратно в нору"
             },
@@ -5694,7 +5781,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-cleat-hitch.jpg",
+              "src": "/knowledge/illustrations/knot-cleat-hitch.svg",
               "alt": "Пошаговая схема узла на утке",
               "caption": "Полный оборот, восьмёрки, затем стопорящий шлаг"
             },
@@ -5731,7 +5818,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-figure-eight.jpg",
+              "src": "/knowledge/illustrations/knot-figure-eight.svg",
               "alt": "Пошаговая схема узла восьмёрка",
               "caption": "Образует форму цифры 8 при затягивании"
             },
@@ -5775,6 +5862,12 @@
               "content": "Быстрое крепление к столбу, релингу или кольцу."
             },
             {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-clove-hitch.svg",
+              "alt": "Пошаговая схема выбленочного узла",
+              "caption": "Один шлаг, крест сверху, второй шлаг, ходовой конец под крест"
+            },
+            {
               "type": "heading",
               "content": "Применение"
             },
@@ -5789,6 +5882,19 @@
             {
               "type": "warning",
               "content": "Может проскользнуть при переменных нагрузках. Добавьте полуштыки или используйте другой узел для критичных случаев."
+            },
+            {
+              "type": "heading",
+              "content": "Как вязать"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Проведите ходовой конец вокруг леера один раз",
+                "2. Перекрестите его поверх коренного конца",
+                "3. Сделайте второй шлаг в ту же сторону",
+                "4. Проденьте ходовой конец под этот перекрест"
+              ]
             }
           ]
         },
@@ -5799,6 +5905,12 @@
             {
               "type": "text",
               "content": "Надёжный, проверенный способ крепления к столбу, кольцу или релингу."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-round-turn.svg",
+              "alt": "Пошаговая схема удавки с двумя полуштыками",
+              "caption": "Два шлага, затем два полуштыка в одну сторону"
             },
             {
               "type": "heading",
@@ -5825,6 +5937,12 @@
             {
               "type": "text",
               "content": "Соединяет два конца, особенно разного диаметра."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-sheet-bend.svg",
+              "alt": "Пошаговая схема шкотового узла",
+              "caption": "В петлю, вокруг обеих ветвей, затем под себя"
             },
             {
               "type": "heading",
@@ -5854,6 +5972,12 @@
               "content": "Крепится к другому концу или рею, может скользить, но держит под нагрузкой."
             },
             {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-rolling-hitch.svg",
+              "alt": "Пошаговая схема задвижного штыка",
+              "caption": "Два шлага в сторону тяги, затем полуштык с другой стороны"
+            },
+            {
               "type": "heading",
               "content": "Применение"
             },
@@ -5863,6 +5987,19 @@
                 "Снятие нагрузки с конца (для очистки захлёстнутой лебёдки)",
                 "Крепление к гику спинакера",
                 "Разгрузка якорной цепи"
+              ]
+            },
+            {
+              "type": "heading",
+              "content": "Как вязать"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Сделайте шлаг вокруг троса так, чтобы коренной конец смотрел в сторону тяги",
+                "2. Сделайте второй шлаг в ту же сторону и заправьте его между первым шлагом и коренным концом",
+                "3. Сделайте полуштык с противоположной от тяги стороны, в ту же сторону",
+                "4. Обтяните узел до того, как он примет нагрузку"
               ]
             }
           ]
@@ -5874,6 +6011,12 @@
             {
               "type": "text",
               "content": "Соединяет два конца ОДИНАКОВОГО диаметра. 'Левый над правым, правый над левым'."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-reef-knot.svg",
+              "alt": "Пошаговая схема прямого узла",
+              "caption": "Левый поверх правого, затем правый поверх левого"
             },
             {
               "type": "warning",
@@ -5890,6 +6033,18 @@
                 "Связывание тюков",
                 "Некритичные соединения"
               ]
+            },
+            {
+              "type": "heading",
+              "content": "Как вязать"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Левый конец поверх правого, затем под него",
+                "2. Теперь правый конец поверх левого, затем под него",
+                "3. Уложите узел плашмя: каждый ходовой конец возвращается рядом со своим коренным"
+              ]
             }
           ]
         },
@@ -5900,6 +6055,12 @@
             {
               "type": "text",
               "content": "Связывающий узел - очень тугой, держит крепко."
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-constrictor.svg",
+              "alt": "Пошаговая схема удавки",
+              "caption": "Как выбленочный, но конец проходит сразу под двумя прядями"
             },
             {
               "type": "heading",
@@ -5917,6 +6078,19 @@
             {
               "type": "warning",
               "content": "Очень трудно развязать - может потребоваться разрезать. Не используйте там, где нужно будет развязывать!"
+            },
+            {
+              "type": "heading",
+              "content": "Как вязать"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. Сделайте шлаг и перекрестите ходовой конец поверх коренного",
+                "2. Сделайте второй шлаг в ту же сторону",
+                "3. Проведите конец поверх коренного, затем под накрывающий шлаг и под коренной конец",
+                "4. Затяните. Оба конца выходят между шлагами"
+              ]
             }
           ]
         },
@@ -5940,7 +6114,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-bowline.jpg",
+              "src": "/knowledge/illustrations/knot-bowline.svg",
               "alt": "单套结分步图解",
               "caption": "兔子从洞里出来，绕过树，回到洞里"
             },
@@ -5991,7 +6165,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-cleat-hitch.jpg",
+              "src": "/knowledge/illustrations/knot-cleat-hitch.svg",
               "alt": "系缆桩结分步图解",
               "caption": "整圈、8字形、然后锁定圈"
             },
@@ -6028,7 +6202,7 @@
             },
             {
               "type": "illustration",
-              "src": "/knowledge/illustrations/knot-figure-eight.jpg",
+              "src": "/knowledge/illustrations/knot-figure-eight.svg",
               "alt": "8字结分步图解",
               "caption": "拉紧后形成8字形"
             },
@@ -6072,6 +6246,12 @@
               "content": "快速固定到柱子、栏杆或环上。"
             },
             {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-clove-hitch.svg",
+              "alt": "丁香结分步图",
+              "caption": "绕一圈，从上面交叉，再绕一圈，活端从交叉下穿出"
+            },
+            {
               "type": "heading",
               "content": "用途"
             },
@@ -6086,6 +6266,19 @@
             {
               "type": "warning",
               "content": "在间歇性负载下可能滑脱。关键应用中需加半结或使用其他绳结。"
+            },
+            {
+              "type": "heading",
+              "content": "如何打结"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. 将活端绕栏杆一圈",
+                "2. 从主绳上方交叉过去",
+                "3. 沿同一方向再绕一圈",
+                "4. 把活端从这道交叉下面穿出"
+              ]
             }
           ]
         },
@@ -6096,6 +6289,12 @@
             {
               "type": "text",
               "content": "安全可靠的方式固定到柱子、环或栏杆。"
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-round-turn.svg",
+              "alt": "双半结分步图",
+              "caption": "绕两圈，再沿同一方向打两个半结"
             },
             {
               "type": "heading",
@@ -6122,6 +6321,12 @@
             {
               "type": "text",
               "content": "连接两根绳索，特别是不同直径的。"
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-sheet-bend.svg",
+              "alt": "单套结分步图",
+              "caption": "穿过绳环，绕过两股，再从自身下面穿回"
             },
             {
               "type": "heading",
@@ -6151,6 +6356,12 @@
               "content": "固定到另一根绳索或圆材，可以滑动但受力时抓牢。"
             },
             {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-rolling-hitch.svg",
+              "alt": "卷结分步图",
+              "caption": "两圈朝向受力方向，另一侧再打一个半结"
+            },
+            {
               "type": "heading",
               "content": "用途"
             },
@@ -6160,6 +6371,19 @@
                 "减轻绳索张力（清理绞盘卡死）",
                 "固定到大三角帆杆",
                 "缓冲锚链"
+              ]
+            },
+            {
+              "type": "heading",
+              "content": "如何打结"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. 绕另一根绳一圈，主绳朝向受力方向",
+                "2. 沿同一方向再绕一圈，这一圈夹在第一圈和主绳之间",
+                "3. 在远离受力的一侧打一个半结，转向与前面相同",
+                "4. 受力前先把结收紧"
               ]
             }
           ]
@@ -6171,6 +6395,12 @@
             {
               "type": "text",
               "content": "连接两根相同直径的绳索。'左压右，右压左'。"
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-reef-knot.svg",
+              "alt": "平结分步图",
+              "caption": "先左压右，再右压左"
             },
             {
               "type": "warning",
@@ -6187,6 +6417,18 @@
                 "捆扎",
                 "非关键连接"
               ]
+            },
+            {
+              "type": "heading",
+              "content": "如何打结"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. 左端压过右端，再从下面穿回",
+                "2. 现在位于右边的那一端压过另一端，再从下面穿回",
+                "3. 把结理平：每个绳头都回到自己的主绳旁边"
+              ]
             }
           ]
         },
@@ -6197,6 +6439,12 @@
             {
               "type": "text",
               "content": "绑扎结 - 极其紧固，牢牢抓住。"
+            },
+            {
+              "type": "illustration",
+              "src": "/knowledge/illustrations/knot-constrictor.svg",
+              "alt": "缩结分步图",
+              "caption": "与双套结相同，但绳头要同时从两股下面穿过"
             },
             {
               "type": "heading",
@@ -6214,6 +6462,19 @@
             {
               "type": "warning",
               "content": "很难解开 - 可能需要剪断。不要在需要解开的地方使用！"
+            },
+            {
+              "type": "heading",
+              "content": "如何打结"
+            },
+            {
+              "type": "list",
+              "items": [
+                "1. 绕一圈，活端从主绳上方交叉",
+                "2. 沿同一方向再绕一圈",
+                "3. 活端先压过主绳，再同时从压绳和主绳下面穿过",
+                "4. 拉紧。两个绳头都从两圈之间伸出"
+              ]
             }
           ]
         },
